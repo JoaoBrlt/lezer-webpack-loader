@@ -1,2 +1,3 @@
 # lezer-loader
-Webpack loader for Lezer grammar files
+
+Webpack loader for Lezer grammar files.
