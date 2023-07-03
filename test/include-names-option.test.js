@@ -12,9 +12,7 @@ describe('"includeNames" option', () => {
     const stats = await compile(compiler);
     const output = getModuleSource("simple.grammar", stats);
 
-    expect(output).toEqual(expect.stringContaining("export const\n"));
-    expect(output).toEqual(expect.stringContaining("export const parser"));
-    expect(output).toEqual(expect.stringContaining("termNames:"));
+    expect(output).toMatchSnapshot();
     expect(getErrors(stats)).toHaveLength(0);
     expect(getWarnings(stats)).toHaveLength(0);
   });
@@ -24,9 +22,7 @@ describe('"includeNames" option', () => {
     const stats = await compile(compiler);
     const output = getModuleSource("simple.grammar", stats);
 
-    expect(output).toEqual(expect.stringContaining("export const\n"));
-    expect(output).toEqual(expect.stringContaining("export const parser"));
-    expect(output).toEqual(expect.not.stringContaining("termNames:"));
+    expect(output).toMatchSnapshot();
     expect(getErrors(stats)).toHaveLength(0);
     expect(getWarnings(stats)).toHaveLength(0);
   });
