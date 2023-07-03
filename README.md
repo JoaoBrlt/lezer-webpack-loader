@@ -1,3 +1,8 @@
+[![npm][npm]][npm-url]
+[![node][node]][node-url]
+[![tests][tests]][tests-url]
+[![size][size]][size-url]
+
 # lezer-webpack-loader
 
 Webpack loader for [Lezer](https://lezer.codemirror.net/docs/) grammar files.
@@ -177,3 +182,12 @@ If given, will be used as context tracker in a parser built with `buildParser`.
 ## License
 
 This project is licensed under the GPLv3 License - see the [LICENSE](LICENSE) file for details.
+
+[npm]: https://img.shields.io/npm/v/lezer-webpack-loader.svg
+[npm-url]: https://npmjs.com/package/lezer-webpack-loader
+[node]: https://img.shields.io/node/v/lezer-webpack-loader.svg
+[node-url]: https://nodejs.org
+[tests]: https://github.com/joaobrlt/lezer-webpack-loader/workflows/lezer-webpack-loader/badge.svg
+[tests-url]: https://github.com/joaobrlt/lezer-webpack-loader/actions
+[size]: https://packagephobia.now.sh/badge?p=lezer-webpack-loader
+[size-url]: https://packagephobia.now.sh/result?p=lezer-webpack-loader
