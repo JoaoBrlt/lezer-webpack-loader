@@ -1,15 +1,15 @@
 {
-  "name": "lezer-loader",
+  "name": "lezer-webpack-loader",
   "version": "1.0.0",
   "description": "Webpack loader for Lezer grammar files.",
   "author": "João Brilhante",
   "license": "GPL-3.0-only",
   "repository": {
     "type": "git",
-    "url": "git@github.com:joaobrlt/lezer-loader.git"
+    "url": "git@github.com:joaobrlt/lezer-webpack-loader.git"
   },
-  "homepage": "https://github.com/joaobrlt/lezer-loader",
-  "bugs": "https://github.com/joaobrlt/lezer-loader/issues",
+  "homepage": "https://github.com/joaobrlt/lezer-webpack-loader",
+  "bugs": "https://github.com/joaobrlt/lezer-webpack-loader/issues",
   "main": "dist/bundle.js",
   "engines": {
     "node": ">= 12.13.0"
@@ -45,6 +45,7 @@
     "@babel/cli": "^7.22.5",
     "@babel/core": "^7.22.5",
     "@babel/preset-env": "^7.22.5",
+    "@types/jest": "^29.5.2",
     "babel-loader": "^9.1.2",
     "cross-env": "^7.0.3",
     "eslint": "^8.43.0",
