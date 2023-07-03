@@ -12,10 +12,7 @@ module.exports = {
   overrides: [
     // Tests
     {
-      files: [
-        "**/__tests__/**/*.{js,jsx,ts,tsx}",
-        "**/*.{test,spec}.{js,jsx,ts,tsx}",
-      ],
+      files: ["**/__tests__/**/*.js", "**/*.{spec,test}.js"],
       extends: ["plugin:jest/recommended"],
       plugins: ["jest"],
     },
