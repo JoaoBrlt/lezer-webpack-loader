@@ -30,7 +30,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.grammar/i,
+        test: /\.grammar$/i,
         use: "lezer-webpack-plugin",
       },
     ],
