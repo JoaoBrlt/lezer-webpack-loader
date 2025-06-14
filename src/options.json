@@ -50,38 +50,45 @@
     "contextTracker": {
       "description": "If given, will be used as context tracker in a parser built with buildParser.",
       "link": "https://lezer.codemirror.net/docs/ref/#generator.BuildOptions.contextTracker",
-      "type": "object",
-      "properties": {
-        "start": {
-          "description": "The initial value of the context at the start of the parse.",
-          "link": "https://lezer.codemirror.net/docs/ref/#lr.ContextTracker.constructor^spec.start"
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "start": {
+              "description": "The initial value of the context at the start of the parse.",
+              "link": "https://lezer.codemirror.net/docs/ref/#lr.ContextTracker.constructor^spec.start"
+            },
+            "shift": {
+              "description": "Update the context when the parser executes a shift action.",
+              "link": "https://lezer.codemirror.net/docs/ref/#lr.ContextTracker.constructor^spec.shift",
+              "instanceof": "Function"
+            },
+            "reduce": {
+              "description": "Update the context when the parser executes a reduce action.",
+              "link": "https://lezer.codemirror.net/docs/ref/#lr.ContextTracker.constructor^spec.reduce",
+              "instanceof": "Function"
+            },
+            "reuse": {
+              "description": "Update the context when the parser reuses a node from a tree fragment.",
+              "link": "https://lezer.codemirror.net/docs/ref/#lr.ContextTracker.constructor^spec.reuse",
+              "instanceof": "Function"
+            },
+            "hash": {
+              "description": "Reduce a context value to a number (for cheap storage and comparison). Only needed for strict contexts.",
+              "link": "https://lezer.codemirror.net/docs/ref/#lr.ContextTracker.constructor^spec.hash",
+              "instanceof": "Function"
+            },
+            "strict": {
+              "description": "By default, nodes can only be reused during incremental parsing if they were created in the same context as the one in which they are reused. Set this to false to disable that check (and the overhead of storing the hashes).",
+              "link": "https://lezer.codemirror.net/docs/ref/#lr.ContextTracker.constructor^spec.strict",
+              "type": "boolean"
+            }
+          }
         },
-        "shift": {
-          "description": "Update the context when the parser executes a shift action.",
-          "link": "https://lezer.codemirror.net/docs/ref/#lr.ContextTracker.constructor^spec.shift",
+        {
           "instanceof": "Function"
-        },
-        "reduce": {
-          "description": "Update the context when the parser executes a reduce action.",
-          "link": "https://lezer.codemirror.net/docs/ref/#lr.ContextTracker.constructor^spec.reduce",
-          "instanceof": "Function"
-        },
-        "reuse": {
-          "description": "Update the context when the parser reuses a node from a tree fragment.",
-          "link": "https://lezer.codemirror.net/docs/ref/#lr.ContextTracker.constructor^spec.reuse",
-          "instanceof": "Function"
-        },
-        "hash": {
-          "description": "Reduce a context value to a number (for cheap storage and comparison). Only needed for strict contexts.",
-          "link": "https://lezer.codemirror.net/docs/ref/#lr.ContextTracker.constructor^spec.hash",
-          "instanceof": "Function"
-        },
-        "strict": {
-          "description": "By default, nodes can only be reused during incremental parsing if they were created in the same context as the one in which they are reused. Set this to false to disable that check (and the overhead of storing the hashes).",
-          "link": "https://lezer.codemirror.net/docs/ref/#lr.ContextTracker.constructor^spec.strict",
-          "type": "boolean"
         }
-      },
+      ],
       "additionalProperties": false
     }
   },

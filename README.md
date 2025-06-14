@@ -185,7 +185,7 @@ Type:
 ```ts
 import { ContextTracker } from "@lezer/lr";
 
-type contextTracker = ContextTracker<any>;
+type contextTracker = ContextTracker<any> | ((terms: Object<number>) => ContextTracker<any>);
 ```
 
 Default: `undefined`
