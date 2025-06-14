@@ -31,7 +31,7 @@ module.exports = {
     rules: [
       {
         test: /\.grammar$/i,
-        use: "lezer-webpack-plugin",
+        use: "lezer-webpack-loader",
       },
     ],
   },
@@ -47,6 +47,7 @@ This way you can import the parser and the tokens directly from the grammar file
 - [**`warn`**](#warn)
 - [**`includeNames`**](#includeNames)
 - [**`moduleStyle`**](#moduleStyle)
+- [**`typeScript`**](#typeScript)
 - [**`exportName`**](#exportName)
 - [**`externalTokenizer`**](#externalTokenizer)
 - [**`externalPropSource`**](#externalPropSource)
@@ -90,6 +91,18 @@ Default: `"es"`
 
 Determines the module system used by the output file.
 Can be either "cjs" (CommonJS) or "es" (ES2015 module).
+
+### `typeScript`
+
+Type:
+
+```ts
+type typeScript = boolean;
+```
+
+Default: `false`
+
+Set this to `true` to output TypeScript code instead of plain JavaScript.
 
 ### `exportName`
 

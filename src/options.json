@@ -17,6 +17,11 @@
       "link": "https://lezer.codemirror.net/docs/ref/#generator.BuildOptions.moduleStyle",
       "type": "string"
     },
+    "typeScript": {
+      "description": "Set this to true to output TypeScript code instead of plain JavaScript.",
+      "link": "https://lezer.codemirror.net/docs/ref/#generator.BuildOptions.typeScript",
+      "type": "boolean"
+    },
     "exportName": {
       "description": "The name of the export that holds the parser in the output file. Defaults to \"parser\".",
       "link": "https://lezer.codemirror.net/docs/ref/#generator.BuildOptions.exportName",

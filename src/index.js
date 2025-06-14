@@ -1,6 +1,5 @@
 import { validate } from "schema-utils";
 import { buildParserFile } from "@lezer/generator";
-
 import schema from "./options.json";
 
 export default function loader(source) {
