@@ -1,13 +1,13 @@
+# lezer-webpack-loader
+
 [![npm][npm]][npm-url]
 [![node][node]][node-url]
 [![tests][tests]][tests-url]
 [![size][size]][size-url]
 
-# lezer-webpack-loader
-
 Webpack loader for [Lezer](https://lezer.codemirror.net/docs/) grammar files.
 
-## Getting started
+## Getting Started
 
 To begin, you'll need to install `lezer-webpack-loader`:
 

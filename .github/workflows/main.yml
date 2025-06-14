@@ -1,72 +1,41 @@
 name: lezer-webpack-loader
 
 on:
+  # Manual trigger
+  workflow_dispatch:
+
+  # When a commit is pushed
   push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
 
 permissions:
-  contents: read
+  contents: read # To clone the repository
 
 jobs:
-  lint:
-    name: Lint
-    runs-on: ubuntu-22.04
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout the project
-        uses: actions/checkout@v3
+      - name: Checkout the repository
+        uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: "npm"
+          node-version-file: .nvmrc
+          cache: npm
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install the dependencies
+        run: npm ci
+
+      - name: Check the format
+        run: npm run format
 
       - name: Lint the package
         run: npm run lint
 
-  build:
-    name: Build
-    needs: lint
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Checkout the project
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: "npm"
-
-      - name: Install dependencies
-        run: npm install
+      - name: Test the package
+        run: npm run test
 
       - name: Build the package
         run: npm run build
-
-  test:
-    name: Test
-    needs: build
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Checkout the project
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: "npm"
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Test the package
-        run: npm run test

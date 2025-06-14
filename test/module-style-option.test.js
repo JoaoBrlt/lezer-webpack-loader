@@ -1,10 +1,4 @@
-import {
-  compile,
-  getCompiler,
-  getErrors,
-  getModuleSource,
-  getWarnings,
-} from "./helpers";
+import { compile, getCompiler, getErrors, getModuleSource, getWarnings } from "./helpers";
 
 describe('"moduleStyle" option', () => {
   it('should work with "es"', async () => {

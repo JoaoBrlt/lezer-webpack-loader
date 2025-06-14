@@ -1,14 +1,13 @@
 # Files ignored by Prettier, see https://prettier.io/docs/en/ignore.html
 
 # Output
-/dist
-
-# Testing
-/coverage
+dist/
 
 # Dependencies
-/node_modules
+node_modules/
 
-# Configuration
-package.json
-package-lock.json
+# Tests
+coverage/
+
+# Documentation
+README.md

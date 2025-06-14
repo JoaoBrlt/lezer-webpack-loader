@@ -1,10 +1,4 @@
-import {
-  compile,
-  getCompiler,
-  getErrors,
-  getWarnings,
-  getModuleSource,
-} from "./helpers";
+import { compile, getCompiler, getErrors, getModuleSource, getWarnings } from "./helpers";
 
 describe("loader", () => {
   it("should work", async () => {

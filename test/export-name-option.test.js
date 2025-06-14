@@ -1,10 +1,4 @@
-import {
-  compile,
-  getCompiler,
-  getErrors,
-  getModuleSource,
-  getWarnings,
-} from "./helpers";
+import { compile, getCompiler, getErrors, getModuleSource, getWarnings } from "./helpers";
 
 describe('"exportName" option', () => {
   it("should work", async () => {
